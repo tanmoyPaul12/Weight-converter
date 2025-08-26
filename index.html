@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weight Converter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1 class="title">Weight Converter</h1>
+        <div class="input-container">
+            <label for="pounds">Pounds:</label>
+            <input type="number" class="input" id="input" step="0.1">
+        </div>
+
+
+        <p>Your weight in kg is: <span id="ans">100</span></p>
+        <p class="error" id="error">Error</p>
+
+        <script src="script.js"></script>
+    </div>
 </body>
 </html>
