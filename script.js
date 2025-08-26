@@ -38,34 +38,37 @@ const  updateResult = function(){
 }
 
 
-//it will take everyvalue without enter
+//it will take every value without enter
 
 // inputEle.addEventListener("input",updateResult)
 
 
 //submit and wait for 3s==>
 
-// inputEle.addEventListener("keydown", (e)=>{
-//     if (e.key==="Enter") {
-//         clearTimeout(resultUpdateTime)
-//            clearTimeout(noErrorTime);
-//        resultUpdateTime = setTimeout(()=>{
-//             updateResult();
-//         },3000)
+inputEle.addEventListener("keydown", (e)=>{
+    if (e.key==="Enter") {
+        clearTimeout(resultUpdateTime)
+           clearTimeout(noErrorTime);
+           clearTimeout(errorTime);
+       resultUpdateTime = setTimeout(()=>{
+            updateResult();
+        },3000)
         
-//     }
-// })
+    }
+})
     
 
 //auto submit after delay==>
 
 
-inputEle.addEventListener("input" , ()=>{
+// inputEle.addEventListener("input" , ()=>{
     
-    clearTimeout(resultUpdateTime);
-    clearTimeout(noErrorTime); //cancel 4s and start new delay
-    resultUpdateTime = setTimeout(()=>{
-        updateResult();
-    },delay)
+//     clearTimeout(resultUpdateTime);
+//     clearTimeout(noErrorTime); //cancel 4s and start new delay
+//     clearTimeout(errorTime);
 
-})
+//     resultUpdateTime = setTimeout(()=>{
+//         updateResult();
+//     },delay)
+
+// })
