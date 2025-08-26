@@ -1,10 +1,16 @@
 const inputEle = document.getElementById("input")
+
 const errorEle = document.getElementById("error")
+
 const ansEle = document.getElementById("ans")
 
 let errorTime;
+
 let noErrorTime;
 
+let resultUpdateTime;
+
+let delay = 3000;
 
 const  updateResult = function(){
 
@@ -25,18 +31,40 @@ const  updateResult = function(){
         noErrorTime = setTimeout(function(){
             inputEle.value = "";
             ansEle.innerText = "";
-        },4000)
+        },4000);
     }
+    
+    
 }
 
 
-inputEle.addEventListener("keydown" , (event)=>{
-    if (event.key==="Enter") {
-        updateResult();      
-        // console.log(inputEle.value);
-        // console.log(ansEle.innerText)
+//it will take everyvalue without enter
+
+inputEle.addEventListener("input",updateResult)
+
+
+//submit and wait for 3s==>
+
+inputEle.addEventListener("keydown", (e)=>{
+    if (e.key==="Enter") {
+        clearTimeout(resultUpdateTime)
+       resultUpdateTime = setTimeout(()=>{
+            updateResult();
+        },3000)
+        
     }
-    
 })
     
+
+//auto submit after delay==>
+
+
+inputEle.addEventListener("input" , ()=>{
     
+    clearTimeout(resultUpdateTime)
+
+    resultUpdateTime = setTimeout(()=>{
+        updateResult();
+    },delay)
+
+})

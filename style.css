@@ -42,7 +42,8 @@ body{
 }
 .error{
     color: red;
-    display: none;
+     display: none; 
+    /* html thkya remove kri dile eta krte lgto na */
 }
 @media screen and (max-width:540px) {
     .container{
