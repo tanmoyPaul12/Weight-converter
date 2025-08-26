@@ -50,6 +50,9 @@ body{
         max-width: min-content;
         width: min-content;
     }
+    .title{
+        text-align: center;
+    }
     .input-container{
         display: flex;
         flex-direction: column;
