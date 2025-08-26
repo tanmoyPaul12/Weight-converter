@@ -40,20 +40,20 @@ const  updateResult = function(){
 
 //it will take everyvalue without enter
 
-inputEle.addEventListener("input",updateResult)
+// inputEle.addEventListener("input",updateResult)
 
 
 //submit and wait for 3s==>
 
-inputEle.addEventListener("keydown", (e)=>{
-    if (e.key==="Enter") {
-        clearTimeout(resultUpdateTime)
-       resultUpdateTime = setTimeout(()=>{
-            updateResult();
-        },3000)
+// inputEle.addEventListener("keydown", (e)=>{
+//     if (e.key==="Enter") {
+//         clearTimeout(resultUpdateTime)
+//        resultUpdateTime = setTimeout(()=>{
+//             updateResult();
+//         },3000)
         
-    }
-})
+//     }
+// })
     
 
 //auto submit after delay==>
