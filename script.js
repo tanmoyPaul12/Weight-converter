@@ -48,6 +48,7 @@ const  updateResult = function(){
 // inputEle.addEventListener("keydown", (e)=>{
 //     if (e.key==="Enter") {
 //         clearTimeout(resultUpdateTime)
+//            clearTimeout(noErrorTime);
 //        resultUpdateTime = setTimeout(()=>{
 //             updateResult();
 //         },3000)
@@ -61,8 +62,8 @@ const  updateResult = function(){
 
 inputEle.addEventListener("input" , ()=>{
     
-    clearTimeout(resultUpdateTime)
-
+    clearTimeout(resultUpdateTime);
+    clearTimeout(noErrorTime); //cancel 4s and start new delay
     resultUpdateTime = setTimeout(()=>{
         updateResult();
     },delay)
